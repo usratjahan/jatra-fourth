@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeroBg from "../assets/images/Background.png";
+import Cloud1 from "../assets/images/cloud-1.png";
+import Cloud2 from "../assets/images/cloud-2.png";
 
 /* ═══════════════════════════════════════════════════════════
    MOCK API  →  Replace with real fetch('/api/...') when ready
@@ -361,22 +363,22 @@ const Home = () => {
 
           {/* ================= CLOUDS GO HERE ================= */}
 
-          {/* Cloud layer 1 (slow) */}
+          {/*Cloud layer 1 (slow) */}
           <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none z-[2]">
             <div className="animate-moveCloud">
               <img
-                src="src/assets/images/cloud-2.png"
+                src={Cloud2}
                 alt="cloud"
                 className="w-[700px] opacity-80"
               />
             </div>
           </div>
 
-          {/* Cloud layer 2 (fast) */}
+          {/*Cloud layer 2 (fast) */}
           <div className="absolute top-24 left-0 w-full overflow-hidden pointer-events-none z-[2] opacity-70">
             <div className="animate-moveCloudFast">
               <img
-                src="src/assets/images/cloud-1.png"
+                src={Cloud1}
                 alt="cloud"
                 className="w-[600px]"
               />
